@@ -1,0 +1,349 @@
+% !TeX spellcheck = de_DE
+\documentclass[a4paper,11pt]{ctexart}
+
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[shortlabels]{enumitem}
+\usepackage[hmargin=1.25in,vmargin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=green]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{math}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usepackage[american inductors]{circuitikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{upgreek}
+\usepackage{xfrac}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{rotating}
+
+\renewcommand\theequation{\arabic{equation}}
+\renewcommand{\contentsname}{}
+\renewcommand\arraystretch{1.5}
+
+\newcommand{\kV}{\,\text{kV}}
+\newcommand{\V}{\,\text{V}}
+\newcommand{\Ohm}{\,\Omega}
+\newcommand{\MOhm}{\,M\Omega}
+\renewcommand{\H}{\,\text{H}}
+\newcommand{\s}{\,\text{s}}
+\newcommand{\kA}{\,\text{kA}}
+\newcommand{\A}{\,\text{A}}
+\newcommand{\MW}{\,\text{MW}}
+\newcommand{\W}{\,\text{W}}
+\newcommand{\MVar}{\,\text{MVar}}
+\newcommand{\MVA}{\,\text{MVA}}
+\renewcommand{\S}{\,\text{S}}
+\newcommand{\km}{\,\text{km}}
+\newcommand{\diff}{\text{d}}
+\newcommand{\Hz}{\,\text{Hz}}
+\newcommand{\kHz}{\,\text{kHz}}
+\renewcommand{\j}{\text{j}}
+\newcommand{\ssum}{\scriptscriptstyle \sum}
+
+%\renewcommand{\omega}{\upomega}
+
+\newcommand{\du}[1]
+{
+	#1^{\circ}
+}
+\newcommand{\ang}[1]
+{
+	\angle#1^{\circ}
+}
+
+\newcommand{\bfem}[1]
+{
+	\em\bfseries#1\normalfont
+}
+
+\newcommand{\subpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{1em}
+}
+
+\newcommand{\subsubpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{2em}
+}
+\newcommand{\subsubsubpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{3em}
+}
+
+\newcommand{\AuthorX}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}谢弘洋\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910641\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}孟诗涵\hspace{1em}陈晓彤\hspace{2em}}\\
+}
+
+\newcommand{\AuthorM}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}孟诗涵\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910063\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}谢弘洋\hspace{1em}陈晓彤\hspace{2em}}\\
+}
+
+\newcommand{\AuthorC}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}陈晓彤\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910659\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}谢弘洋\hspace{1em}孟诗涵\hspace{2em}}\\
+}
+
+\newenvironment{shrinkeq}[2]
+{
+	\bgroup
+	\addtolength\abovedisplayshortskip{#1}
+	\addtolength\abovedisplayskip{#1}
+	\addtolength\belowdisplayshortskip{#2}
+	\addtolength\belowdisplayskip{#2}
+}
+{
+	\egroup
+	\ignorespacesafterend
+}
+
+\setcounter{secnumdepth}{4}
+
+\title
+{
+	\linespread{1.5} \zihao{4}
+	高压数字测量系统课程设计 \\ 
+	\zihao{2}
+	开题报告
+}
+\author
+{
+	谢弘洋
+}
+\date{}
+
+\begin{document}
+	\pagestyle{plain}
+
+\begin{figure}[t]
+	\setlength{\abovecaptionskip}{-10mm}
+	\setlength{\belowcaptionskip}{-60mm}
+	\centering
+	\includegraphics[scale=0.4]{page1.png}
+\end{figure}
+
+\begin{center}
+	\zihao{-2}
+	高\,压\,数\,字\,测\,量\,系\,统\,课\,程\,设\,计 \\
+	\vspace{0.7em}
+	
+	\zihao{1}
+	开\hspace{0.5em} 题\hspace{0.5em} 报\hspace{0.5em} 告\\
+	\vspace{3em}
+		
+	\AuthorC
+	
+	\vspace{6em}
+	\today
+\end{center}
+
+\titleformat{\section}{\Large\bfseries\raggedright}{\chinese{section}}{10pt}{}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\titleformat{\subsection}{\bfseries\zihao{-4}}{\arabic{subsection}.}{5pt}{}
+\titlespacing{\subsection}{1em}{2pt}{3pt}
+\titleformat{\subsubsection}{\bfseries\normalsize}{\arabic{subsection}.\arabic{subsubsection}}{5pt}{}
+\titlespacing{\subsubsection}{2em}{1pt}{0pt}
+\titleformat{\paragraph}{\bfseries\normalsize}{\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}}{5pt}{}
+\titlespacing{\paragraph}{3em}{1pt}{0pt}
+
+\newpage
+\begin{spacing}{1.5}
+
+\zihao{-4}
+
+\section{设计目标}
+\par
+本次高压数字测量系统课程设计围绕赵老师提出的\textbf{广域分布互感器智能网联技术}展开，本组主要围绕其中的\textbf{云服务器}部分进行，并完成以下设计目标：
+\begin{enumerate}[1.,topsep=0pt]
+	\setlength{\itemsep}{-0.25\baselineskip}
+	\item 搭建云服务器平台，安装及配置服务器框架、资源和端口。
+	\item 实现云服务器通过网络端口收发数据与命令的功能，与4G模块进行通讯。
+	\item 实现云服务器处理、分析数据数据的功能。
+	\item 以web应用的形式实现网页、手机客户端，进行数据访问和监控。
+	\item 实现云服务器以61850通信规约向电力系统专网传输数据的端口。
+\end{enumerate}
+\par
+综合以上设计目标，能够实现云服务器与互感器数据采集终端、客户端和电力系统专网三者的通讯，向互感器数据采集终端发送命令以读取波形和状态数据，应用云服务器的计算能力完成波形数据的处理和分析，监测广域范围内的电力设施运行状态；另一方面，通过web客户端和电力系统专网能够实现对服务器中历史数据的访问，以及通过云服务器向广域数据采集终端发送指令，实现对广域范围内互感器的远程监测。云服务器既作为分布广泛的各个数据采集终端的大脑，又作为沟通不同用户和电力系统数据之间的桥梁，在广域分布互感器智能网联技术发挥重要作用。
+\par
+图\ref{figure:设计目标结构示意图}展示了云服务器的基本结构以及在整个广域分布互感器智能网联技术项目中发挥的作用。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{4mm}
+	\setlength{\belowcaptionskip}{-4mm}
+	\begin{tikzpicture}
+	\node [cloud, cloud puffs = 15, draw, minimum width = 6.6cm, minimum height = 4.3cm, line width = 0.85pt] at (0,0) {\textbf{云服务器}};
+	\draw (1.3-1,0.8-0.35) rectangle (1.3+1,0.8+0.35);
+	\node at (1.3,0.8) {数据处理};
+	
+	\draw (1.2-1,-0.8-0.35) rectangle (1.2+1,-0.8+0.35);
+	\node at (1.2,-0.8) {端口通讯};
+	
+	\draw (-1.1-0.9,-0.8-0.35) rectangle (-1.1+0.9,-0.8+0.35);
+	\node at (-1.1,-0.8) {数据库};
+	
+	\draw (-1.1-1,0.8-0.35) rectangle (-1.1+1,0.8+0.35);
+	\node at (-1.1,0.8) {服务器框架};
+	
+	\node [double arrow, draw] at (4.7,0) {61850协议};
+	\draw (6.4-0.3,1.3) rectangle (6.4+0.3,-1.3);
+	\node at (6.4,0.9) {电};
+	\node at (6.4,0.3) {力};
+	\node at (6.4,-0.3) {系};
+	\node at (6.4,-0.9) {统};
+	
+	\node [double arrow, draw, minimum height = 2cm, minimum width = 1cm, double arrow head extend = 0.1cm] at (-4.3,0) {};
+	\draw (-5.8-0.4,1.3) rectangle (-5.8+0.4,-1.3);
+	\node at (-5.8,0.9) {web};
+	\node at (-5.8,0.3) {客};
+	\node at (-5.8,-0.3) {户};
+	\node at (-5.8,-0.9) {端};
+	
+	\node [double arrow, draw, minimum height = 1.7cm, minimum width = 1cm, double arrow head extend = 0.1cm, rotate = 90] at (0,-2.9) {};
+	
+	\draw (-2,-4.3+0.4) rectangle (2,-4.3-0.4);
+	\node at (0,-4.3) {数据采集终端};
+	
+	\end{tikzpicture}
+	\caption{设计目标结构示意图}\label{figure:设计目标结构示意图}
+\end{figure}
+
+\section{初期思路}
+\par
+在服务器项目的编写上，选择以较为熟悉且应用广泛的Python为主，结合设计目标，服务器端的项目基本结构如图\ref{figure:服务器端结构示意图}所示。其中，端口通讯部分完成和数据采集终端之间的指令发送和数据接收功能，数据处理部分可以对接收的波形进行进一步分析处理，web应用作为服务端程序，实现和不同客户端之间的交互，而数据库负责存储历史数据，将各个功能模块联系在一起。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{4mm}
+	\setlength{\belowcaptionskip}{-4mm}
+	\begin{tikzpicture}
+	\node at (0,0) {数据库};
+	\draw (0,0) ellipse [x radius = 1, y radius = 0.5];
+	\draw [Latex-Latex] (1,0) -- (2,0);
+	\draw (2,0.5) rectangle (4,-0.5);
+	\node at (3,0) {数据处理};
+	
+	\draw [Latex-Latex] (-1,0) -- (-2,0);
+	\draw (-2,0.5) rectangle (-4,-0.5);
+	\node at (-3,0) {web应用};
+	
+	\draw [Latex-Latex] (0,-1) -- (0,-0.5);
+	\draw (-1,-1) rectangle (1,-2);
+	\node at (0,-1.5) {终端通讯};
+	
+	\end{tikzpicture}
+	\caption{服务器端结构示意图}\label{figure:服务器端结构示意图}
+\end{figure}
+\subsection{终端通讯}
+\subpar
+终端通讯部分可以通过TCP协议和各个数据采集终端通过TCP Socket套接字进行通讯，使用socket库实现Socket实例的创建，并为其指定地址和端口号，建立和终端之间的TCP连接，之后即可进行双向通讯，该方法实现简单，在服务器端只需要一个TCP通讯线程实现数据收发，在数据采集终端只需要使用4G模块AT指令集的TCP连接命令即可实现通讯，并且服务器端也可以随时像数据终端发送指令，但由于采用长连接方式，每个数据终端需要占用服务器的一个端口。
+\subpar
+另外也可以采用Http请求的形式实现数据的传输，该方式相对直接通过TCP连接的方式更为灵活，可以复用服务器端口资源，也可以直接在web应用中实现数据的接受，但是增加了数据采集终端的编程难度，同时，由于http每次请求结束后连接即断开，因此需要采用附加的机制如Ajax或Comet来实现服务器端的主动通讯，往往占用大量资源或提高程序的复杂度。
+
+\subsection{数据处理}
+\subpar
+数据处理部分可以直接使用Python代码实现，前期可以做一下简单的运算以验证服务器的数据处理能力。而针对项目的实际应用功能，需要进行数字滤波，并通过FFT运算计算得到频率、有效值、相位等信息，以及根据实际需要据此进行运行状态的分析与判断，这些功能均可以利用Python丰富的资源来实现。
+
+\subsection{web应用}
+\subsubsection*{web框架}
+\subsubpar
+web应用程序围绕着接受Http Request，根据Request内容进行相应处理，并返回Http Response的形式展开，使用web框架的目的在于免除应用开发者进行重复性的枯燥劳动，而可以专注于完成处理Request的部分。
+\subsubpar
+在Python web下主流的框架有Flask和Django两种，其中，Flask更为灵活、自由，适合于小型项目开发，整体性能优于Django；而Django更为成熟、完善，但整体较为冗杂，灵活度较低，适合企业与团队项目。结合两者特点，计划首先通过Flask框架轻量、灵活的特点熟悉web应用的基本架构，并探索一些基本功能的实现；在项目后期结合实际情况，如果Flask框架足以胜任，则继续使用，如果需要转换到Django框架，也可以利用其上手快，第三方库丰富的特点快速地完成项目迁移。
+
+\subsubsection*{web接口}
+\subsubpar
+对于不同的web服务器和web框架之间，需要建立同一的接口使得各种框架和服务器之间能够顺利通讯，在Python下，WSGI（Web Server Gateway Interface，Web服务器网关接口）实现了这一功能，因此可以使用Gunicorn或Nginx/uWSGI等来运行Python web应用。
+
+\subsection{数据库}
+\subpar
+对于数据类型较少，结构简单的项目，可以直接使用轻量的关系数据库SQLite，直接在服务器端本地建立数据库，并且Python以及Flask框架均对其有良好的支持，可以快速建立并应用。如果需要更为完善的数据库服务，腾讯云也提供了MySQL服务器，并采用按量计费的方式使用。
+
+
+\subsection{手机客户端开发}
+\subpar
+随着HTML5的发展，从web应用向手机APP的迁移和整合越来越简便，可以通过开发简单的手机APP框架后嵌套web应用的方式，将客户端从网页迅速迁移到手机上，免除单独开发手机应用程序的成本，提高开发效率。
+
+
+\section{任务清单}
+\subsection{云服务器的选择（已完成）}
+\subpar
+通过租赁或购买云服务器能够免去本地服务器搭建和维护的成本，加快项目推进与展开。腾讯云提供了可以低价体验的云服务器套餐，其性能和资源对于项目初期的需要绰绰有余，并且能够找到较为完善的帮助文档，因此选择其作为搭建云服务器的平台，初步选择的服务器基本参数如下：
+\begin{itemize}[leftmargin = 3em, topsep=0pt]
+	\setlength{\itemsep}{-0.25\baselineskip}
+	\item 规格：S2.SMALL2
+	\item CPU：Intel Xeon E5-2680 Broadwell（v4）@2.4GHz $\times$1
+	\item 内存：2GB DDR4
+	\item 公网带宽：1Mbps
+	\item 内网带宽：1.5Gbps
+	\item 体验价：10元/月
+\end{itemize}
+\subpar
+之后，进行安装服务器操作系统（选择了CentOs），以及Python的安装和环境配置。
+
+\subsection{web应用框架的熟悉（基本完成）}
+\subpar
+通过阅读文档和相关教程，从Flask框架入手，熟悉web应用的编写和整体结构，并通过实际编写简单的web经典例程（如登录界面、邮件收发等），基本掌握Flask应用开发的流程，并配合Gunicorn尝试在云服务器上进行部署。
+
+\subsection{Python程序编写（进行中）}
+\subpar
+使用Python的socket库完成Python Socket程序的编写，在云服务器端运行后，通过PC上的网络调试助手等工具验证与其进行TCP通信的可行性。
+\subpar
+进一步可以编写简单的数据处理程序，在PC端发送模拟的波形数据到云服务器，验证完成数据处理并返回的流程。
+
+\subsection{4G模块通讯}
+\subpar
+使用4G模块和电脑通过USB转TTL模块连接后，从串口调试助手向4G模块发送指令和数据，代替直接通过网络调试助手的功能，此时，PC模拟了数据采集终端产生数据的过程，来验证4G模块和云服务器通讯的可行性。
+
+\subsection{web服务端开发}
+\subpar
+在Flask框架下编写web应用程序，初步实现数据访问，可视化显示等功能，进一步实现web应用向数据终端发送指令，动态地获取各个电力系统设备运行状态的功能。在此过程中也不断完善SQLite数据库结构，使其和服务器端项目的各个部分紧密协作。
+
+\subsection{进一步完善与尝试}
+\subpar
+完成了基本功能后，可以进一步完善服务器功能，如，增加数据处理部分增加更为复杂的处理功能，web应用提供更为丰富的交互方式，云服务器和数据采集终端间更为可靠而高效的通讯，编写61850通讯协议接口，开发手机客户端等，进一步完善项目，并作出一些有益的尝试。
+
+\newpage
+\par
+最后，感谢赵刚老师为我们提供这次锻炼和实践的机会，让我们能够从一个更为全面的角度来进行高压数字测量系统的设计，对电力系统的现实情况也有了更多的了解和认识。我们也会在本次课程设计中充分实践与尝试，锻炼自己的能力，做出成果，有所收获。
+
+\end{spacing}
+	
+\end{document}
