@@ -1,0 +1,198 @@
+% !TeX spellcheck = de_DE
+\documentclass[a4paper,11pt]{ctexart}
+
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[shortlabels]{enumitem}
+\usepackage[hmargin=1.25in,vmargin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{indentfirst}
+\usepackage[colorlinks,linkcolor=blue,anchorcolor=blue,citecolor=green]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{math}
+\usetikzlibrary{shapes.symbols}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.arrows}
+\usepackage[american inductors]{circuitikz}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{upgreek}
+\usepackage{xfrac}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage{rotating}
+
+\renewcommand\theequation{\arabic{equation}}
+\renewcommand{\contentsname}{}
+\renewcommand\arraystretch{1.5}
+
+\newcommand{\kV}{\,\text{kV}}
+\newcommand{\V}{\,\text{V}}
+\newcommand{\Ohm}{\,\Omega}
+\newcommand{\MOhm}{\,M\Omega}
+\renewcommand{\H}{\,\text{H}}
+\newcommand{\s}{\,\text{s}}
+\newcommand{\kA}{\,\text{kA}}
+\newcommand{\A}{\,\text{A}}
+\newcommand{\MW}{\,\text{MW}}
+\newcommand{\W}{\,\text{W}}
+\newcommand{\MVar}{\,\text{MVar}}
+\newcommand{\MVA}{\,\text{MVA}}
+\renewcommand{\S}{\,\text{S}}
+\newcommand{\km}{\,\text{km}}
+\newcommand{\diff}{\text{d}}
+\newcommand{\Hz}{\,\text{Hz}}
+\newcommand{\kHz}{\,\text{kHz}}
+\renewcommand{\j}{\text{j}}
+\newcommand{\ssum}{\scriptscriptstyle \sum}
+
+%\renewcommand{\omega}{\upomega}
+
+\newcommand{\du}[1]
+{
+	#1^{\circ}
+}
+\newcommand{\ang}[1]
+{
+	\angle#1^{\circ}
+}
+
+\newcommand{\bfem}[1]
+{
+	\em\bfseries#1\normalfont
+}
+
+\newcommand{\subpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{1em}
+}
+
+\newcommand{\subsubpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{2em}
+}
+\newcommand{\subsubsubpar}
+{
+	\par
+	\hangafter = 0
+	\setlength{\hangindent}{3em}
+}
+
+\newcommand{\AuthorX}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}谢弘洋\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910641\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}孟诗涵\hspace{1em}陈晓彤\hspace{2em}}\\
+}
+
+\newcommand{\AuthorM}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}孟诗涵\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910063\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}谢弘洋\hspace{1em}陈晓彤\hspace{2em}}\\
+}
+
+\newcommand{\AuthorC}
+{
+	
+	\zihao{-3}
+	\hspace{2em}姓名\hspace{1em} \underline{\hspace{4em}陈晓彤\hspace{4em}}\\
+	\vspace{1em}
+	\hspace{2em}学号\hspace{1em} \underline{\hspace{2.5em}515021910659\hspace{2.5em}}\\
+	\vspace{1em}
+	同组姓名\hspace{1em} \underline{\hspace{2em}谢弘洋\hspace{1em}孟诗涵\hspace{2em}}\\
+}
+
+\newenvironment{shrinkeq}[2]
+{
+	\bgroup
+	\addtolength\abovedisplayshortskip{#1}
+	\addtolength\abovedisplayskip{#1}
+	\addtolength\belowdisplayshortskip{#2}
+	\addtolength\belowdisplayskip{#2}
+}
+{
+	\egroup
+	\ignorespacesafterend
+}
+
+\setcounter{secnumdepth}{4}
+
+\title
+{
+	\linespread{1.5} \zihao{4}
+	高压数字测量系统课程设计 \\ 
+	\zihao{2}
+	开题报告
+}
+\author
+{
+	谢弘洋
+}
+\date{}
+
+\begin{document}
+	\pagestyle{plain}
+
+\begin{figure}[t]
+	\setlength{\abovecaptionskip}{-10mm}
+	\setlength{\belowcaptionskip}{-60mm}
+	\centering
+	\includegraphics[scale=0.4]{page1.png}
+\end{figure}
+
+\begin{center}
+	\zihao{-2}
+	高\,压\,数\,字\,测\,量\,系\,统\,课\,程\,设\,计 \\
+	\vspace{0.7em}
+	
+	\zihao{1}
+	中\hspace{0.5em} 期\hspace{0.5em} 报\hspace{0.5em} 告\\
+	\vspace{3em}
+		
+	\AuthorX
+	
+	\vspace{6em}
+	\today
+\end{center}
+
+\titleformat{\section}{\Large\bfseries\raggedright}{\chinese{section}}{10pt}{}
+\titlespacing{\section}{0pt}{10pt}{5pt}
+\titleformat{\subsection}{\bfseries\zihao{-4}}{\arabic{subsection}.}{5pt}{}
+\titlespacing{\subsection}{1em}{2pt}{3pt}
+\titleformat{\subsubsection}{\bfseries\normalsize}{\arabic{subsection}.\arabic{subsubsection}}{5pt}{}
+\titlespacing{\subsubsection}{2em}{1pt}{0pt}
+\titleformat{\paragraph}{\bfseries\normalsize}{\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}}{5pt}{}
+\titlespacing{\paragraph}{3em}{1pt}{0pt}
+
+\newpage
+\begin{spacing}{1.5}
+
+\zihao{-4}
+
+
+\end{spacing}
+
+
+	
+\end{document}
