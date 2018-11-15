@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.10.27)  15 NOV 2018 21:46
-=======
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840) (preloaded format=xelatex 2018.10.24)  15 NOV 2018 21:43
->>>>>>> 849fb7abdc6f61850527f97bcb8fbfba4ce9e568
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.10.27)  15 NOV 2018 22:14
 entering extended mode
 **./SecondReport.tex
 (SecondReport.tex
 LaTeX2e <2018-04-01> patch level 5
 (C:\CTEX\MiKTeX\tex\latex\ctex\ctexart.cls
 (C:\CTEX\MiKTeX\tex\latex\l3kernel\expl3.sty
-Package: expl3 2018-10-17 L3 programming layer (loader) 
+Package: expl3 2018-10-19 L3 programming layer (loader) 
 
 (C:\CTEX\MiKTeX\tex\latex\l3kernel\expl3-code.tex
-Package: expl3 2018-10-17 L3 programming layer (code)
+Package: expl3 2018-10-19 L3 programming layer (code)
 \c_max_int=\count80
 \l_tmpa_int=\count81
 \l_tmpb_int=\count82
@@ -154,7 +150,7 @@ Package: expl3 2018-10-17 L3 programming layer (code)
 \l__coffin_scaled_width_dim=\dimen133
 )
 (C:\CTEX\MiKTeX\tex\latex\l3kernel\l3xdvipdfmx.def
-File: l3xdvidpfmx.def 2018-10-17 v L3 Experimental driver: xdvipdfmx
+File: l3xdvidpfmx.def 2018-10-19 v L3 Experimental driver: xdvipdfmx
 \g__driver_image_int=\count159
 \g__driver_pdf_object_int=\count160
 ))
@@ -191,7 +187,9 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 \l__ctex_tmp_dim=\dimen134
 \g__ctex_font_size_flag=\count167
 
-(C:\CTEX\CTeX\tex\latex\ctex\cfg\ctexopts.cfg)
+(C:\CTEX\MiKTeX\tex\latex\ctex\config\ctexopts.cfg
+File: ctexopts.cfg 2018/05/02 v2.4.14 Option configuration file (CTEX)
+)
 (C:\CTEX\MiKTeX\tex\latex\base\article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (C:\CTEX\MiKTeX\tex\latex\base\size11.clo
@@ -341,8 +339,8 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks15
 )
-(C:\CTEX\CTeX\tex\latex\CJK\CJKfntef.sty
-Package: CJKfntef 2008/12/29 4.8.2
+(C:\CTEX\MiKTeX\tex\latex\cjk\CJKfntef.sty
+Package: CJKfntef 2015/04/18 4.8.4
 \CJK@fntefSkip=\skip57
 \CJK@nest=\count197
 \CJK@fntefDimen=\dimen171
@@ -477,7 +475,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen190
 \Gm@dimlist=\toks20
 
-(C:\CTEX\UserData\tex\xelatex\xetexconfig\geometry.cfg))
+(C:\CTEX\MiKTeX\tex\xelatex\xetexconfig\geometry.cfg))
 (C:\CTEX\MiKTeX\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip65
@@ -703,12 +701,12 @@ Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 (C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(C:\CTEX\UserData\tex\latex\graphics-cfg\graphics.cfg
+(C:\CTEX\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
 
-(C:\CTEX\UserData\tex\latex\graphics-def\xetex.def
+(C:\CTEX\MiKTeX\tex\latex\graphics-def\xetex.def
 File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
 ))
 \Gin@req@height=\dimen262
@@ -770,7 +768,7 @@ File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
 (C:\CTEX\MiKTeX\tex\latex\xcolor\xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(C:\CTEX\UserData\tex\latex\graphics-cfg\color.cfg
+(C:\CTEX\MiKTeX\tex\latex\graphics-cfg\color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 225.
@@ -1490,55 +1488,26 @@ LaTeX Font Warning: Font shape `TU/FangSong(0)/m/sl' undefined
 (Font)              using `TU/FangSong(0)/m/n' instead on input line 3.
 
 ) (hello.py [6]) [7] [8]
-<<<<<<< HEAD
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
  (SecondReport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
-=======
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 346.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 346.
- (SecondReport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 346.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 346.
->>>>>>> 849fb7abdc6f61850527f97bcb8fbfba4ce9e568
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 349.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
+Package rerunfilecheck Info: File `SecondReport.out' has not changed.
+(rerunfilecheck)             Checksum: 7FB906EA4A633384460036F6286B4983.
 
-
-Package rerunfilecheck Warning: File `SecondReport.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `SecondReport.out':
-<<<<<<< HEAD
-(rerunfilecheck)             Before: F644213DAFBD94EEDCEC670BEDFFE823
-(rerunfilecheck)             After:  F3FD14C04EF109887844A7C1828E9E74.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 349.
  ) 
 Here is how much of TeX's memory you used:
- 47049 strings out of 427792
- 1008384 string characters out of 3154180
- 1436458 words of memory out of 3000000
- 50470 multiletter control sequences out of 15000+200000
-=======
-(rerunfilecheck)             Before: F3FD14C04EF109887844A7C1828E9E74
-(rerunfilecheck)             After:  7FB906EA4A633384460036F6286B4983.
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 346.
- ) 
-Here is how much of TeX's memory you used:
- 47062 strings out of 427821
- 1009239 string characters out of 3154580
- 1436247 words of memory out of 3000000
- 50472 multiletter control sequences out of 15000+200000
->>>>>>> 849fb7abdc6f61850527f97bcb8fbfba4ce9e568
+ 47063 strings out of 427792
+ 1009272 string characters out of 3154180
+ 1436461 words of memory out of 3000000
+ 50484 multiletter control sequences out of 15000+200000
  542218 words of font info for 94 fonts, out of 3000000 for 9000
- 1314 hyphenation exceptions out of 8191
+ 1328 hyphenation exceptions out of 8191
  55i,6n,68p,452b,2455s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on SecondReport.pdf (8 pages).
