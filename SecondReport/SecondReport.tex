@@ -173,11 +173,15 @@
 	中\hspace{0.5em} 期\hspace{0.5em} 报\hspace{0.5em} 告\\
 	\vspace{3em}
 		
-	\AuthorX
+	\AuthorC
 	
 	\vspace{6em}
 	\today
 \end{center}
+\newpage
+\begin{spacing}{1.5}
+	\tableofcontents
+\end{spacing}
 
 \titleformat{\section}{\Large\bfseries\raggedright}{\chinese{section}}{10pt}{}
 \titlespacing{\section}{0pt}{10pt}{5pt}
@@ -208,7 +212,7 @@
 
 \section{云服务器搭建}
 \subsection{云服务器的购买与登录}
-\par
+\subpar
 本小组选择腾讯云作为项目初期使用的云服务器平台，进入腾讯云官方网站（\url{https://cloud.tencent.com/}），绑定微信登录后，完成在校学生认证后即可以10元/月的价格购买指定的服务器套餐，并拥有两次续费机会（每次最长12个月）。在购买界面可以选择服务器操作系统，本小组选择了CentOS系统，作为Linux发行版之一，在网上能找到许多相关的资料和服务器搭建教程，方便学习与实践。
 \begin{figure}[h]
 	\centering
@@ -221,35 +225,61 @@
 	\centering
 	\setlength{\abovecaptionskip}{2mm}
 	\setlength{\belowcaptionskip}{-2mm}
-	\includegraphics[scale=0.25]{安全组2.png}
-	\caption{新建安全组}\label{figure:安全组2}
+	\includegraphics[scale=0.5]{安全组2.png}
+	\includegraphics[scale=0.4]{安全组3.png}
+	\caption{新建与配置安全组}\label{figure:安全组2}
 \end{figure}
-\begin{figure}[h]
-	\centering
-	\setlength{\abovecaptionskip}{2mm}
-	\setlength{\belowcaptionskip}{-2mm}
-	\includegraphics[scale=0.25]{安全组3.png}
-	\caption{配置安全组}\label{figure:安全组3}
-\end{figure}
-\par
+\subpar
 云服务器的正常使用需要首先为其配置安全组，在腾讯云服务器控制台界面进入左侧的安全组菜单，点击新建安全组，由于当前的云服务器仅作为学习探索使用，并没有重要资料，可以直接使用提供的“放通全部端口”的模板。完成安全组创建后，在云主机列表中，选择“更多”操作中的“安全组”-“配置安全组”，选择刚刚创建的安全组；也可以直接选择“安全组”-“一键放通”完成安全组的配置。完成安全组的配置后，即可以选择“登录”操作，初始用户名“root”（最终权限用户），填入购买服务器后收到的密码即可完成云服务器登录。由于初始密码往往复杂且无规律，可以从云主机列表的“更多”操作下选择“密码/密钥”-“重置密码”完成密码重置。
 \begin{figure}[h]
 	\centering
 	\setlength{\abovecaptionskip}{2mm}
 	\setlength{\belowcaptionskip}{-2mm}
-	\includegraphics[scale=0.25]{登录1.png}
+	\includegraphics[scale=0.35]{登录1.png}
+	\includegraphics[scale=0.9]{登录.png}
 	\caption{登录云服务器}\label{figure:登录1}
 \end{figure}
 \subsection{使用SSH密钥登录云服务器}
-\par
+\subpar
 上述登录云服务器的操作以用户名和密码的方式，通过腾讯云提供的WebShell完成，而如果配置了SSH密钥，不仅可以更为快捷地完成登录操作，也能够通过各种远程登录工具（如PuTTY）实现云服务器的登录和相关操作。
-\par
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{SSH1.png}
+	\caption{创建SSH密钥}\label{figure:SSH1}
+\end{figure}
+\subpar
 首先完成SSH密钥的创建和绑定，进入控制台左侧的SSH密钥菜单，新建密钥，选择“创建新密钥对”，并下载创建的密钥。之后，首先需要将正在运行的云主机关机，之后同样从“更多”操作中选择“密码/密钥”-“加载密钥”，选择之前创建的密钥名称，完成绑定。此时，再次选择登录操作，选择“密钥登录”，在“密钥文件”一栏选择之前下载的密钥文件，即可完成登录。
-\par
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{SSH2.png}
+	\includegraphics[scale=0.4]{SSH3.png}
+	\caption{使用SSH密钥登录云服务器}\label{figure:SSH23}
+\end{figure}
+\subpar
 而使用PuTTY登录云服务器首先需要下载PuTTY（\url{https://www.putty.org/}）。完成安装后，首先运行PuTTYgen，选择“Conversions”-“Import Key”，加入之前下载的密钥文件后，点击“Save private Key”，保存私钥。之后，打开PuTTY，配置远程会话模板。在“Connection”-“Data”中的“Auto-login usename”一栏填入默认用户名“root”；在“Connection”-“SSH”-“Auth”中选择加入之前保存的私钥文件；最后，在“Session”中的“Host Name”中填入服务器的公网IP地址，端口选择22，并保存当前会话，之后即可以直接按照本次配置进行云服务器的登录。点击“Open”即可登录云服务器。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{PUTTY1.png}
+	\caption{生成SSH私钥}\label{figure:PUTTY1}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.3]{PUTTY2.png}
+	\includegraphics[scale=0.3]{PUTTY3.png}
+	\includegraphics[scale=0.3]{PUTTY4.png}
+	\caption{配置和打开PuTTY会话}\label{figure:PUTTY234}
+\end{figure}
 \subsection{云服务器端资源安装}
 \subsubsection{Python安装}
-\par
+\subsubpar
 由于最新版本的Python和服务器操作系统的尚存在不少兼容性问题，因此选择安装较为成熟的Python3.6.4版本。首先进入希望的安装目录：
 \begin{verbatim}
     cd ..
@@ -269,13 +299,13 @@
     ./configure --prefix=/usr/local/python3
     make && make install
 \end{verbatim}
-配置软连接（相当于环境变脸配置，由于CentOS已经安装了Python-2.7，因此需要将python命令关联到Python-3.6.4上）：
+配置软连接（相当于环境变量配置，由于CentOS已经安装了Python-2.7，因此需要将python命令关联到Python-3.6.4上）：
 \begin{verbatim}
      ln -s /usr/local/python3 /usr/bin/python
 \end{verbatim}
 此时，在任意位置输入“python”命令，既可以进入Python环境。
 \subsubsection{Python虚拟环境和Python库安装}
-\par
+\subsubpar
 由于使用Python进行Web应用的开发需要安装许多的第三方库，为了防止不同项目安装的不同版本的库之间相互干扰，需要在Python虚拟环境来对不同项目进行隔离。Python-3以上版本通过自带的Pyvenv提供了虚拟环境功能，使得虚拟环境的创建变得较为简单。首先进入存放项目的目录，例如：
 \begin{verbatim}
     cd pythonweb
@@ -285,7 +315,7 @@
     pyvenv flasktest
 \end{verbatim}
 该命令即在pythonweb目录下新建了flasktest目录，该目录即为即将开发的项目，并已经包含了虚拟环境。
-\par
+\subsubpar
 虚拟环境的启动由对应目录中的activate程序完成：
 \begin{verbatim}
     source bin/activate
@@ -294,7 +324,7 @@
 \begin{verbatim}
     deactivate
 \end{verbatim}
-\par
+\subsubpar
 开启虚拟环境既可以在其中安装所需要的Python库而不会干扰其他项目，例如使用pip安装flask库：
 \begin{verbatim}
     pip install flask
@@ -305,11 +335,11 @@
 
 \section{服务器端程序编写}
 \subsection{TCP通讯程序}
-\par
+\subpar
 若4G模块直接通过TCP方式与服务器进行通讯，则需要在云服务器端编写相应的TCP通讯程序。Python提供了socket库来完成TCP通讯。对应的Python程序如下所示：
 \inputpython{tcptest.py}{1}{23}
 \subsection{HTTP通讯程序}
-\par
+\subpar
 由于4G模块提供了HTTPD模式，因此也可以通过HTTP方式实现与服务器端的通讯。使用flask来完成HTTP的解析任务，因此在flask框架下只需要编写相应的数据提取和响应程序即可。
 \inputpython{hello.py}{1}{24}
 
@@ -322,13 +352,29 @@
 该4G模块能够通过一系列“AT+指令”实现对模块工作模式和相应参数的查询和设置，通过连接的串口对模块发送对应的语句即可实现，而在PC端，有人物联网公司提供了配套的USR-G78X软件，能够直接在UI界面上实现对模块的模式和参数设置，能够大大简化模块测试使用阶段的工作，加快和云服务器的通讯功能验证进程。
 \par
 通过USB转串口模块将4G模块与PC连接后，打开USR-G78X软件，选择对应的端口号，选择波特率为115200，“检验/数据/停止”分别为“None/8/1”，选择“流控”为“None”，之后打开串口。点击“进入配置状态”后，在软件左侧界面完成相应的设置，点击“设置并保存所有参数”，软件自动将对应的AT指令发送给模块。设置完成后，点击模块重启，即可完成工作模式和参数的设置。
+
 \subsection{网络透传模式}
-\par
+\subpar
 在网络透传模式下，设置服务器地址为云服务器的公网IP，端口设置为服务器端TCP通讯程序中设置的监听端口，连接类型设置为TCP、长连接，连接超时设置5秒。依次点击“设置并保存所有参数”、“模块重启”后，即可以在右下方发送窗口中输入发送的内容，点击发送后可以在右侧中间看到收到的服务器发回的内容。同样，也可以在完成网络透传模式的设置后，点击“关闭串口”，使用其他的PC端串口助手实现和服务器端的TCP通讯。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.2]{TCP.png}
+	\caption{TCP网络透传模式}\label{figure:TCP}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.2]{HTTPD.png}
+	\caption{HTTPD模式}\label{figure:HTTPD}
+\end{figure}
 \subsection{HTTPD模式}
-\par
+\subpar
 选择HTTPD模式，选择HTTP请求方式为“GET”，HTTP请求的URL为“/test[3F]”，服务器地址为云服务器的公网IP，端口设置为云服务器端flask框架内设置的端口。依此点击“设置并保存所有参数”、“模块重启”。之后，在软件右下方发送窗口中输入“data=...”，点击发送即可在右侧中部看到服务器端发回的“...”数据。
-\par
+
+\subpar
 同样，在完成了HTTPD模式的设置后，也可与关闭软件，使用其他的PC端串口助手实现和服务器端的HTTPD通讯。
 
 \section{PC端串口程序编写}
@@ -338,6 +384,80 @@
 另外，经过反复测试，TCP透传的方式比HTTPD的通讯模式相比，具有更好的稳定性和可靠性，处理和响应的延迟时间也更小，也不会出现得不到服务器端接收不到请求的情况，同时，对于之后FPGA的编程，由于TCP透传模式只要通过串口给出数据即可，而HTTPD模式还需要给出相应的请求头、请求体，因此TCP透传模式下的FPGA编程也更容易实现，因此首先考虑实现TCP透传模式下的波形数据测试。
 \par
 对于该Python程序而言，首先需要实现通过PC端串口进行数据的收发，Python中的serial库提供了串口打开、串口设置和串口数据收发的一系列功能，编写程序如下所示。
+\inputpython{tcpsend.py}{1}{50}
+\par
+在Windows命令行中运行程序后可以看到串口打开成功和发送成功地提示，以及发送和收到的数据。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.3]{PC.png}
+	\caption{PC端串口程序示例}\label{figure:PC}
+\end{figure}
+
+\section{在本地PC使用抓包软件进行调试}
+\par
+在服务器开发的过程中，如果能够对服务器的端口进行监听和数据抓包，就能够清楚直观地看到服务器端和客户端之间从建立通讯到交换数据的整个过程，对服务器开发过程中的通讯协议、报文格式有更为直观的了解，也能在开发遇到问题时迅速地发现错误所在，加快开发过程。
+\par
+在Windows平台，有着众多的端口代理、监听、抓包、数据分析工具软件，相比于云服务器端，从操作系统到抓包软件乃至网上的教程，对于初学者都更为友好。但在本地PC上运行服务器程序时，服务器只具有内网的IP地址，在公网上进行通讯的4G模块无法和本地PC进行通讯，因此需要通过隧道穿透的方式，利用另外的代理服务器，将本地PC的某一端口映射到公网IP的某一端口。众多公司都提供了这样的内网穿透服务，这里以Natapp为例，登录官网完成注册后购买一条隧道，选择隧道类型为TCP型，并设置一个可用的公网端口，本地端口设置为服务器程序使用的端口，完成配置后，下载对应客户端和config.ini配置文件，将隧道的authtoken写入配置文件中，运行客户端程序即完成了内网穿透。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.25]{隧道1.png}
+	\caption{Natapp隧道购买与配置}\label{figure:隧道1}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{隧道2.png}
+	\caption{config.ini文件配置}\label{figure:隧道2}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{隧道3.png}
+	\caption{运行natapp客户端程序}\label{figure:隧道3}
+\end{figure}
+\par
+此时，只需要在4G模块的配置软件中将服务器地址改为natapp提供的域名，端口改为设置的公网映射端口，即可实现4G模块和本地PC之间的通讯。同时，下载本地端口监听工具RawCap，运行设置监听本地网络端口“127.0.0.1”，以及指定输出文件名后即可开始监听，结束后按“Ctrl+C”退出程序，得到的.pcap文件可以使用WireShark等软件打开，利用“tcp.port == 5000”这样的过滤器语句进行过滤后即可得到4G模块和服务器端的通讯记录。
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.4]{隧道4.png}
+	\caption{RawCap配置与使用}\label{figure:隧道4}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\setlength{\abovecaptionskip}{2mm}
+	\setlength{\belowcaptionskip}{-2mm}
+	\includegraphics[scale=0.2]{隧道5.png}
+	\caption{抓取数据包示例：HTTP请求}\label{figure:隧道5}
+\end{figure}
+
+
+
+\section{后续计划}
+\par
+通过半个学期的学习与实践，目前已经基本完成了项目的整体搭建并实现了项目基本功能，在此基础上，计划在之后的时间里进行以下的探索与推进。
+\subsection{正弦数据点的生成与发送}
+\subpar
+在已经编写好的PC端串口程序的基础上，加入按照ADC采样的格式生成16位、2048个正弦数据点并进行发送的功能，也可以加入数据包头等内容，或者对每个数据点进行编号，当有数据点传输发生错误时可以有效识别出出错或丢失的数据点，通过服务器端插值等方式进行补救。
+\subsection{服务器端数据点的接收}
+\subpar
+在服务器端已有的数据接收程序的基础上，加入接收2048个正弦数据点的功能，并且能够对附带的数据包头、数据点序号等信息进行识别，确保数据点的成功接收。
+
+\subsection{服务器端数据处理}
+\subpar
+在服务器端编写数据处理程序，通过FFT等算法计算得到数据点的相关信息，如幅值、频率、相位等，并将处理结果进行发送与存储。
+
+\subsection{服务器端数据的存储与访问}
+\subpar
+在服务器端通过数据库等方式存储每一次计算得到的数据信息，并编写Web程序实现通过网页方式访问存储的历史数据的功能，尝试通过列表、图像等方式对历史数据的直观展示，乃至数据的下载功能。
+
 
 
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.10.27)  15 NOV 2018 22:14
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6840 64-bit) (preloaded format=xelatex 2018.10.27)  16 NOV 2018 16:16
 entering extended mode
 **./SecondReport.tex
 (SecondReport.tex
@@ -1434,7 +1434,11 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 176.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-]
+] (SecondReport.toc)
+\tf@toc=\write5
+\openout5 = `SecondReport.toc'.
+
+ [2]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -1468,46 +1472,97 @@ File: screen/安全组3.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+File: screen/登录1.png Graphic file (type bmp)
+<screen/登录1.png>
+File: screen/登录.png Graphic file (type bmp)
+<screen/登录.png>
+[3]
+File: screen/SSH1.png Graphic file (type bmp)
+<screen/SSH1.png>
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: screen/登录1.png Graphic file (type bmp)
-<screen/登录1.png>
-[2] [3] [4] (C:\CTEX\MiKTeX\tex\latex\listings\lstlang1.sty
+File: screen/SSH2.png Graphic file (type bmp)
+<screen/SSH2.png>
+File: screen/SSH3.png Graphic file (type bmp)
+<screen/SSH3.png>
+[4]
+File: screen/PUTTY1.png Graphic file (type bmp)
+<screen/PUTTY1.png>
+File: screen/PUTTY2.png Graphic file (type bmp)
+<screen/PUTTY2.png>
+File: screen/PUTTY3.png Graphic file (type bmp)
+<screen/PUTTY3.png>
+File: screen/PUTTY4.png Graphic file (type bmp)
+<screen/PUTTY4.png>
+
+Overfull \hbox (7.34265pt too wide) in paragraph at lines 263--280
+[]\TU/SimSun(0)/m/n/12.045 而 使 用 \TU/lmr/m/n/12.045 PuTTY \TU/SimSun(0)/m/n/12.
+045 登 录 云 服 务 器 首 先 需 要 下 载 \TU/lmr/m/n/12.045 PuTTY |\TU/SimSun(0)/m/n/12.045 
+（[][]$[][][][][] [] [] [] [][][] [] [][][][][] []
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6] (C:\CTEX\MiKTeX\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2018/09/02 1.7 listings language file
-)
+) [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 310.
+nput line 340.
  (tcptest.py
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
 
-[5]
 
 LaTeX Font Warning: Font shape `TU/FangSong(0)/m/sl' undefined
 (Font)              using `TU/FangSong(0)/m/n' instead on input line 3.
 
-) (hello.py [6]) [7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
- (SecondReport.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 349.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
+) (hello.py [8])
+File: screen/TCP.png Graphic file (type bmp)
+<screen/TCP.png>
+File: screen/HTTPD.png Graphic file (type bmp)
+<screen/HTTPD.png>
+ [9] [10] (tcpsend.py [11])
+File: screen/PC.png Graphic file (type bmp)
+<screen/PC.png>
+ [12]
+File: screen/隧道1.png Graphic file (type bmp)
+<screen/隧道1.png>
+File: screen/隧道2.png Graphic file (type bmp)
+<screen/隧道2.png>
+File: screen/隧道3.png Graphic file (type bmp)
+<screen/隧道3.png>
+File: screen/隧道4.png Graphic file (type bmp)
+<screen/隧道4.png>
+File: screen/隧道5.png Graphic file (type bmp)
+<screen/隧道5.png>
+ [13] [14] [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 469.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 469.
+
+(SecondReport.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 469.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 469.
 Package rerunfilecheck Info: File `SecondReport.out' has not changed.
-(rerunfilecheck)             Checksum: 7FB906EA4A633384460036F6286B4983.
+(rerunfilecheck)             Checksum: 71BCD31EB98C0EA73215187BA9329AAC.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 349.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 469.
  ) 
 Here is how much of TeX's memory you used:
- 47063 strings out of 427792
- 1009272 string characters out of 3154180
- 1436461 words of memory out of 3000000
- 50484 multiletter control sequences out of 15000+200000
- 542218 words of font info for 94 fonts, out of 3000000 for 9000
+ 47218 strings out of 427792
+ 1011916 string characters out of 3154180
+ 1437304 words of memory out of 3000000
+ 50617 multiletter control sequences out of 15000+200000
+ 544049 words of font info for 101 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 55i,6n,68p,452b,2455s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,6n,68p,452b,2187s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on SecondReport.pdf (8 pages).
+Output written on SecondReport.pdf (15 pages).
